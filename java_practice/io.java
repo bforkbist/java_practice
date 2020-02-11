@@ -41,7 +41,7 @@ class io{
         System.out.println("double: "+d);
         
         System.out.println(in.next());
-
+        in.close();
         
     }
 }
