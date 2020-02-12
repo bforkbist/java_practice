@@ -1,0 +1,51 @@
+
+
+create table Employee(Emp_Id int unique auto_increment not null, Emp_name varchar(45) not null, Emp_salary double not null, Dept_Id int, Emp_Manager_Id int, Emp_Phone double,Primary key(Emp_Id));
+
+
+create table Department(Dept_Id int unique not null auto_increment, Dept_Name varchar(45) not null, primary key(Dept_Id));
+
+
+
+insert into department (Dept_Name) values ('ee'),('ec'),('me'),('it');
+insert into employee (Emp_name,Emp_salary,Emp_Manager_Id,Emp_Phone,Dept_Id) values ('aditya',450000,3,8750590625,5),('ritu',455000,6,8750590625,4),('ravi',450060,2,8750540625,3);
+
+
+select Emp_name, Dept_Name from department inner join employee where employee.Dept_Id=1 or employee.Dept_Id=2 or employee.Dept_Id=3 ;
+
+alter table employee add column basic_pay double;
+
+update employee set basic_pay=(((emp_salary/30)*40)/100);
+
+set sql_safe_updates=0;
+
+select Emp_Id,basic_pay from employee;
+select Emp_Id from employee where not mod(Emp_Id,2)=0;
+select  avg(emp_salary) from employee group by(Dept_Id);
+
+Select Dept_Id,Emp_salary
+From employee E1,(Select employee.Dept_Id,Max(Emp_salary) as Emp_salary
+                  From employee group by Dept_Id) E2
+Where E1.Dept_Id = E2.Dept_Id
+And E1.salary<E2.salary;
+
+select max(emp_salary) from employee where emp_salary<(select max(emp_salary) from employee) group by(Dept_Id);
+
+select Emp_salary*1.1,Emp_name,Emp_Id from employee ;
+
+
+
+select * from aditya;
+
+insert into aditya(id,name,age) values (5,'ankush',45);
+
+Error Code: 1054. Unknown column 'id' in 'field list'
+
+
+select * from person;
+select * from training_details;
+
+select * from person inner join training_details on training_details.emp_STATE=person.per_state;
+select * from person left join training_details on training_details.emp_STATE=person.per_state;
+select * from person right join training_details on training_details.emp_STATE=person.per_state;
+select * from person full join training_details on training_details.emp_STATE=person.per_state;

@@ -1,0 +1,38 @@
+create table person (per_id int not null auto_increment unique,
+					 per_name varchar(40),
+					 per_state varchar(40),
+                     primary key(per_id) );
+insert into person (per_name,per_state) values ('ankush','RJ'),('ritu','gj'),('riyaz','up');
+alter table training_details change column `per_id` int foreign key,foreign key(`per_id`);
+ALTER TABLE training_details ADD FOREIGN KEY (per_id) REFERENCES person(per_id);
+
+update training_details set per_id = person.per_id where training_details.emp_NAME=person.per_name; 
+
+
+
+Error Code: 1054. Unknown column 'person.per_name' in 'where clause'
+
+
+select * from person;
+select * from training_details
+
+Error Code: 1054. Unknown column 'person.per_name' in 'where clause'
+Error Code: 1064. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Error Code: 1054. Unknown column 'person.per_name' in 'where clause'   select * ' at line 1
+Error Code: 1054. Unknown column 'id' in 'field list'
+
+
+
+delimiter $$
+create trigger insert_value 
+after Insert on aditya
+for each row 
+begin 
+if id is null then
+insert into aditya (id) value(0);
+end if;
+end$$
+delimiter ;
+insert into  aditya(name,age) values ('mehul',13);
+
+select * from department;
+select * from employee;
