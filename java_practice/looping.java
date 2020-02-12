@@ -19,7 +19,8 @@ class looping{
 	}
 	// do while loop runs at least once
 	do{
-		System.out.println("hey we are in do while loop");
+        System.out.println("hey we are in do while loop and i ="+i);
+        i++;
 	}while(i==10);
 	
 	

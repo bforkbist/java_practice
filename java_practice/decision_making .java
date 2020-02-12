@@ -37,6 +37,20 @@ class decision_making{
             else
                 System.out.println("less than -1000000  ");
         }
+
+        char j= in.next().charAt(0);
+
+        //switchcase 
+        switch(j){
+            case '+': System.out.println("+");
+                break;
+            case '1': System.out.println("1");
+                break;
+            case 'a': System.out.println("a");
+                break;
+            default: System.out.println("worng choice");
+        }
+        in.close();
         
     }
 }
