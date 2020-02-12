@@ -15,7 +15,14 @@ class looping{
             
             System.out.println("hey"+(i++));
             
-        }
+        
+	}
+	// do while loop runs at least once
+	do{
+		System.out.println("hey we are in do while loop");
+	}while(i==10);
+	
+	
     }
 
 }
