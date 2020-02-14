@@ -9,6 +9,7 @@ class Fuctions{
         Scanner in = new Scanner(System.in);
         a = in.nextInt();
         b = in.nextInt();
+        in.close();
     }
 
     public static int add(final int c, final int d) {

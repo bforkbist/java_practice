@@ -8,11 +8,13 @@ class One{
     public String gString(){
         Scanner in = new Scanner(System.in) ;
         String str = in.next();
+        in.close();
         return str;
     }
     public int gInteger(){
         Scanner in = new Scanner(System.in) ;
         int str = in.nextInt();
+        in.close();
         return str;
     }
     public void display(String s) {
