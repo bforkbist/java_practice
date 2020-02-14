@@ -15,8 +15,8 @@ class B extends A{
 }
 class inheritence {
     public static void main(String[] args) {
-        System.out.println("hello");
         B b =new B();
+        System.out.println("hello");
         b.out();
     }
 }
