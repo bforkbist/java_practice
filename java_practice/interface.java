@@ -1,8 +1,6 @@
-package java_practice;
-
 interface Interface1 {// interface kisi bhi function ko decalre krta h taaki baar baar confusion na ho
-   default public void display(){ //default ka kaam h ke jo bhi call kre is fuction ko toh apni value 
-    //                              define kre nhi toh default value aayegi
+   default public void display(){ /*default ka kaam h ke jo bhi call kre is fuction ko toh apni value 
+                                    define kre nhi toh default value aayegi */
         System.out.println("hey we are in default and inplementing interface1");
     }
 }

@@ -1,4 +1,4 @@
-package java_practice;
+
 class number{
     public static void main(String[] args) {
         byte b=127;

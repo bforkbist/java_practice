@@ -28,6 +28,7 @@ class Max {
             }
         }
         System.out.println(t);
+        in.close();
 
     }
 }

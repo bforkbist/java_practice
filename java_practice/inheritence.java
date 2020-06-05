@@ -1,5 +1,3 @@
-package java_practice;
-
 class A{
     public int x=56;
     public void out(){
@@ -8,9 +6,11 @@ class A{
 }
 
 class B extends A{
-    public int x=44;
+    public int y=44;
+    
     public void out1(){
-        System.out.println("child");
+        int z= x+y;
+        System.out.println("z = "+z);
     }
 }
 class inheritence {
@@ -18,5 +18,6 @@ class inheritence {
         B b =new B();
         System.out.println("hello");
         b.out();
+        b.out1();
     }
 }

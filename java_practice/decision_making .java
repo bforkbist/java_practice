@@ -1,4 +1,3 @@
-package java_practice;
 
 import java.util.Scanner;
 
@@ -7,7 +6,7 @@ class decision_making{
         Scanner in = new Scanner(System.in);
         int  a=in.nextInt();
         if(a>=0){
-            if (a>0 && a<=10)
+            if (a>0 & a<=10)
                 System.out.println("greater than 0 less than 10");
             else if(a>10 && a<=100)
                 System.out.println("greater than 10 less than 100");

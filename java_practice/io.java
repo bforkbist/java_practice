@@ -1,5 +1,3 @@
-package java_practice;
-
 import java.util.Scanner;
 
 class io{

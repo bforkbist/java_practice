@@ -1,4 +1,4 @@
-package java_practice;
+
 import  java.util.*;
 // keep in mind that static main can call only static fuction so its better
 // to have another class object to perfrom operation on fuctions
